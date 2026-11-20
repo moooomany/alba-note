@@ -52,7 +52,7 @@ function showPage(pageId) {
   document.querySelectorAll(".nav-button").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.page === page.id);
   });
-  $("pageTitle").textContent = page.id === "home" ? "알바비 계산기" : page.title;
+  $("pageTitle").textContent = page.id === "home" ? "알바노트" : page.title;
 
   closeDrawer();
   window.scrollTo(0, 0);
