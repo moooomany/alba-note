@@ -3,6 +3,7 @@ import { state } from "../storage.js";
 import { $, formatWon, formatHour, todayStr, todayMonth, parseLocalDate, getMonday, dateToStr, DAY_NAMES } from "../utils.js";
 import { calculateNetPayForMonth, sumHoursBetween } from "../pay.js";
 import { tasksForDate, isTaskChecked, toggleTaskCheck, taskItemsHtml } from "../tasks.js";
+import { icon } from "../icons.js";
 
 let quickPages = [];
 
@@ -56,7 +57,7 @@ function render() {
 export default {
   id: "home",
   title: "홈",
-  icon: "🏠",
+  icon: "home",
   desc: "",
 
   template() {
@@ -110,7 +111,7 @@ export default {
     quickPages = app.pages.filter(page => page.id !== "home");
     $("homeQuickGrid").innerHTML = quickPages.map(page => `
       <button type="button" class="quick-item" data-goto="${page.id}">
-        <span class="q-icon">${page.icon}</span>
+        <span class="q-icon">${icon(page.icon)}</span>
         <span class="q-title">${page.title}</span>
         <span class="q-desc">${page.desc}</span>
       </button>

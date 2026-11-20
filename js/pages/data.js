@@ -56,7 +56,7 @@ function render() {
 export default {
   id: "data",
   title: "데이터 관리",
-  icon: "💾",
+  icon: "database",
   desc: "백업 · 복원 · 이관",
 
   template() {

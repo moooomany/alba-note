@@ -43,7 +43,7 @@ function render() {
 export default {
   id: "tasks",
   title: "업무 체크",
-  icon: "✅",
+  icon: "check",
   desc: "오늘 할 일 체크하기",
 
   template() {

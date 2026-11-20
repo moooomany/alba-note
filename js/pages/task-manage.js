@@ -132,7 +132,7 @@ function onListChange(e) {
 export default {
   id: "task-manage",
   title: "업무 등록",
-  icon: "📝",
+  icon: "list",
   desc: "업무 추가 · 켜기/끄기",
 
   template() {

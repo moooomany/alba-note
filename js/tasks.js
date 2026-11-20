@@ -76,7 +76,7 @@ export function taskItemsHtml(tasks, dateStr, emptyText) {
       : "";
     return `
       <button type="button" class="task-item ${done ? "done" : ""}" data-check-task="${task.id}" aria-pressed="${done}">
-        <span class="check">${done ? "✓" : ""}</span>
+        <span class="check" aria-hidden="true"></span>
         <span class="task-text"><span class="task-title">${escapeHtml(task.title)}</span>${sub}</span>
       </button>
     `;

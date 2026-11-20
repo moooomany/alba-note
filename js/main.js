@@ -1,6 +1,7 @@
 // 앱 시작점: 데이터 불러오기 → 페이지 만들기 → 메뉴/라우팅 연결
 import { loadState } from "./storage.js";
 import { $, toast } from "./utils.js";
+import { icon } from "./icons.js";
 
 import homePage from "./pages/home.js";
 import calculatorPage from "./pages/calculator.js";
@@ -27,7 +28,7 @@ function mountPages() {
     .join("");
 
   $("navList").innerHTML = pages
-    .map(page => `<button class="nav-button" data-page="${page.id}">${page.icon} ${page.title}</button>`)
+    .map(page => `<button class="nav-button" data-page="${page.id}">${icon(page.icon)}<span>${page.title}</span></button>`)
     .join("");
 
   pages.forEach(page => page.init?.(app));

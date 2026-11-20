@@ -188,7 +188,7 @@ function renderWeeklyDetails(details) {
 export default {
   id: "calculator",
   title: "알바비 계산기",
-  icon: "💰",
+  icon: "calculator",
   desc: "근무시간 입력 · 예상 급여",
 
   template() {

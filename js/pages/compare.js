@@ -172,7 +172,7 @@ function renderCompareRows() {
 export default {
   id: "compare",
   title: "수령액 비교",
-  icon: "📊",
+  icon: "chart",
   desc: "예상 금액 vs 실제 수령액",
 
   template() {
