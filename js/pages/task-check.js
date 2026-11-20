@@ -1,8 +1,8 @@
 // 업무 체크 페이지
-import { state } from "../storage.js";
-import { view } from "../view-state.js";
-import { $, todayStr, parseLocalDate, dateToStr, DAY_NAMES } from "../utils.js";
-import { tasksForDate, isTaskChecked, toggleTaskCheck, taskItemsHtml } from "../tasks.js";
+import { state } from "../storage.js?v=20261120131555";
+import { view } from "../view-state.js?v=20261120131555";
+import { $, todayStr, parseLocalDate, dateToStr, DAY_NAMES } from "../utils.js?v=20261120131555";
+import { tasksForDate, isTaskChecked, toggleTaskCheck, taskItemsHtml } from "../tasks.js?v=20261120131555";
 
 function shiftDate(diff) {
   const d = parseLocalDate(view.taskDate);

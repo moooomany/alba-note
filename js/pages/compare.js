@@ -1,8 +1,8 @@
 // 수령액 비교 페이지
-import { state, saveState } from "../storage.js";
-import { view } from "../view-state.js";
-import { $, formatWon, dateToStr } from "../utils.js";
-import { calculateNetPayForMonth } from "../pay.js";
+import { state, saveState } from "../storage.js?v=20261120131555";
+import { view } from "../view-state.js?v=20261120131555";
+import { $, formatWon, dateToStr } from "../utils.js?v=20261120131555";
+import { calculateNetPayForMonth } from "../pay.js?v=20261120131555";
 
 function ensureCompareRowsUpToCurrentMonth() {
   const months = new Set(state.logs.filter(x => x.date).map(x => x.date.slice(0, 7)));

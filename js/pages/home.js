@@ -1,9 +1,9 @@
 // 메인(홈) 화면
-import { state } from "../storage.js";
-import { $, formatWon, formatHour, todayStr, todayMonth, parseLocalDate, getMonday, dateToStr, DAY_NAMES } from "../utils.js";
-import { calculateNetPayForMonth, sumHoursBetween } from "../pay.js";
-import { tasksForDate, isTaskChecked, toggleTaskCheck, taskItemsHtml } from "../tasks.js";
-import { icon } from "../icons.js";
+import { state } from "../storage.js?v=20261120131555";
+import { $, formatWon, formatHour, todayStr, todayMonth, parseLocalDate, getMonday, dateToStr, DAY_NAMES } from "../utils.js?v=20261120131555";
+import { calculateNetPayForMonth, sumHoursBetween } from "../pay.js?v=20261120131555";
+import { tasksForDate, isTaskChecked, toggleTaskCheck, taskItemsHtml } from "../tasks.js?v=20261120131555";
+import { icon } from "../icons.js?v=20261120131555";
 
 let quickPages = [];
 

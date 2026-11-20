@@ -1,6 +1,6 @@
 // 데이터 관리 페이지 (백업 파일 저장/불러오기, v1 이관, 초기화)
-import { state, normalizeData, applyData, exportJson, resetState, readLegacyRaw, hasLegacyData } from "../storage.js";
-import { $, todayStr, toast, downloadText, copyText } from "../utils.js";
+import { state, normalizeData, applyData, exportJson, resetState, readLegacyRaw, hasLegacyData } from "../storage.js?v=20261120131555";
+import { $, todayStr, toast, downloadText, copyText } from "../utils.js?v=20261120131555";
 
 let app = null;
 

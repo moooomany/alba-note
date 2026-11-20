@@ -1,14 +1,14 @@
 // 앱 시작점: 데이터 불러오기 → 페이지 만들기 → 메뉴/라우팅 연결
-import { loadState } from "./storage.js";
-import { $, toast } from "./utils.js";
-import { icon } from "./icons.js";
+import { loadState } from "./storage.js?v=20261120131555";
+import { $, toast } from "./utils.js?v=20261120131555";
+import { icon } from "./icons.js?v=20261120131555";
 
-import homePage from "./pages/home.js";
-import calculatorPage from "./pages/calculator.js";
-import comparePage from "./pages/compare.js";
-import taskCheckPage from "./pages/task-check.js";
-import taskManagePage from "./pages/task-manage.js";
-import dataPage from "./pages/data.js";
+import homePage from "./pages/home.js?v=20261120131555";
+import calculatorPage from "./pages/calculator.js?v=20261120131555";
+import comparePage from "./pages/compare.js?v=20261120131555";
+import taskCheckPage from "./pages/task-check.js?v=20261120131555";
+import taskManagePage from "./pages/task-manage.js?v=20261120131555";
+import dataPage from "./pages/data.js?v=20261120131555";
 
 // 메뉴에 표시되는 순서. 새 페이지를 만들면 여기에 추가하면 됩니다.
 const pages = [homePage, calculatorPage, comparePage, taskCheckPage, taskManagePage, dataPage];
