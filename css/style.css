@@ -814,3 +814,19 @@ button.small {
 .switch input:checked + .slider::before {
   transform: translateX(18px);
 }
+
+/* ---------- 월 전체 생성 옵션 ---------- */
+.fill-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.fill-row select {
+  flex: 1;
+  min-width: 0;
+}
+
+.fill-row button {
+  flex: 0 0 auto;
+}

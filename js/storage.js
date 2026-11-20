@@ -11,7 +11,9 @@ export function defaultSettings() {
     hourlyWage: 10000,
     taxRate: 3.3,
     probationYn: "N",
-    weeklyHolidayYn: "Y"
+    weeklyHolidayYn: "Y",
+    // 월 전체 생성 시 주말(토·일) 포함 여부
+    fillWeekendYn: "Y"
   };
 }
 

@@ -11,6 +11,7 @@ function bindSettingsToUi() {
   $("taxRate").value = state.settings.taxRate ?? 3.3;
   $("probationYn").value = state.settings.probationYn || "N";
   $("weeklyHolidayYn").value = state.settings.weeklyHolidayYn || "Y";
+  $("fillWeekendYn").value = state.settings.fillWeekendYn === "N" ? "N" : "Y";
 }
 
 function readSettingsFromUi() {
@@ -70,9 +71,12 @@ function addEmptyRow() {
 function fillSelectedMonth() {
   const { first, last } = getMonthRange(view.targetMonth);
   const exists = new Set(state.logs.map(log => log.date));
+  const includeWeekend = state.settings.fillWeekendYn !== "N";
 
   for (let d = new Date(first); d <= last; d.setDate(d.getDate() + 1)) {
     const key = dateToStr(d);
+    const isWeekend = d.getDay() === 0 || d.getDay() === 6;
+    if (!includeWeekend && isWeekend) continue;
     if (!exists.has(key)) {
       state.logs.push({ date: key, hours: "", memo: "" });
     }
@@ -262,10 +266,15 @@ export default {
       <section class="card">
         <div class="section-title">
           <span>근무시간 입력</span>
-          <div class="row-actions">
-            <button class="secondary" id="fillMonthBtn">월 전체 생성</button>
-            <button id="addRowBtn">행 추가</button>
-          </div>
+          <button id="addRowBtn">행 추가</button>
+        </div>
+
+        <div class="fill-row">
+          <select id="fillWeekendYn" aria-label="월 전체 생성 옵션">
+            <option value="Y">주말 포함</option>
+            <option value="N">주말 미포함 (평일만)</option>
+          </select>
+          <button class="secondary" id="fillMonthBtn">월 전체 생성</button>
         </div>
 
         <table class="work-table">
@@ -306,6 +315,11 @@ export default {
     SETTING_IDS.forEach(id => {
       $(id).addEventListener("input", readSettingsFromUi);
       $(id).addEventListener("change", readSettingsFromUi);
+    });
+
+    $("fillWeekendYn").addEventListener("change", () => {
+      state.settings.fillWeekendYn = $("fillWeekendYn").value;
+      saveState();
     });
 
     $("addRowBtn").addEventListener("click", addEmptyRow);
