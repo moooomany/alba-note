@@ -17,6 +17,14 @@ function renderNewTaskForm() {
   $("newTaskDays").innerHTML = dayChipsHtml(Array.from(newTaskDays));
 }
 
+/** 업무 추가 입력칸(이름, 종류, 반복 요일)을 처음 상태로 되돌린다. */
+function resetNewTaskForm() {
+  $("newTaskTitle").value = "";
+  $("newTaskType").value = "daily";
+  newTaskDays.clear();
+  renderNewTaskForm();
+}
+
 function submitNewTask() {
   const title = $("newTaskTitle").value.trim();
   const type = $("newTaskType").value;
@@ -33,7 +41,7 @@ function submitNewTask() {
   }
 
   addTask({ title, type, repeatDays: Array.from(newTaskDays) });
-  $("newTaskTitle").value = "";
+  resetNewTaskForm();
   $("newTaskTitle").focus();
   renderList();
   toast(`'${title}' 업무를 추가했습니다.`);
