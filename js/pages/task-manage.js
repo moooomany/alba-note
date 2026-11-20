@@ -1,7 +1,7 @@
 // 업무 등록 페이지 (추가 / 이름·요일 수정 / 활성화 토글 / 삭제)
-import { state } from "../storage.js?v=20261120131555";
-import { $, WEEKDAYS, escapeHtml, toast } from "../utils.js?v=20261120131555";
-import { findTask, addTask, updateTask, deleteTask } from "../tasks.js?v=20261120131555";
+import { state } from "../storage.js?v=20261120132133";
+import { $, WEEKDAYS, escapeHtml, toast } from "../utils.js?v=20261120132133";
+import { findTask, addTask, updateTask, deleteTask } from "../tasks.js?v=20261120132133";
 
 const newTaskDays = new Set();
 

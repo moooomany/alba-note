@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1" cy="0" r="0.95">
+      <stop offset="0" stop-color="#3B82F6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#glow)"/>
+  <g transform="translate(256 256) scale(1.1) translate(-256 -256)">
+  <!-- 메모 카드 (안드로이드 마스크 안전영역 안쪽) -->
+  <rect x="140" y="120" width="232" height="272" rx="32" fill="#FFFFFF"/>
+  <!-- 1행: 완료 -->
+  <rect x="172" y="160" width="56" height="56" rx="15" fill="#3B82F6"/>
+  <path d="M187 188.5l11 11 19-21.5" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="246" y="170" width="94" height="14" rx="7" fill="#94A3B8"/>
+  <rect x="246" y="194" width="62" height="12" rx="6" fill="#CBD5E1"/>
+  <!-- 2행 -->
+  <rect x="174.5" y="238.5" width="51" height="51" rx="13" fill="none" stroke="#CBD5E1" stroke-width="5"/>
+  <rect x="246" y="248" width="94" height="14" rx="7" fill="#CBD5E1"/>
+  <rect x="246" y="272" width="62" height="12" rx="6" fill="#E2E8F0"/>
+  <!-- 3행: 금액 바 -->
+  <rect x="172" y="320" width="168" height="40" rx="12" fill="#ECFDF5"/>
+  <rect x="186" y="334" width="70" height="12" rx="6" fill="#10B981"/>
+  </g>
+</svg>
