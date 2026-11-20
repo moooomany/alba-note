@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>알바비 계산기</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <nav class="drawer" id="drawer">
+    <div class="drawer-title">메뉴</div>
+    <div id="navList"></div>
+  </nav>
+
+  <div class="app">
+    <div class="top-bar">
+      <button class="menu-button" id="menuBtn" aria-label="메뉴 열기">
+        <span class="hamburger"><span></span><span></span><span></span></span>
+      </button>
+      <h1 id="pageTitle">알바비 계산기</h1>
+    </div>
+
+    <!-- 각 페이지 화면은 js/pages/*.js 에서 만들어 여기에 넣습니다. -->
+    <div id="pages"></div>
+
+    <noscript>
+      <div class="card">이 앱은 자바스크립트가 필요합니다.</div>
+    </noscript>
+
+    <div class="footer-note">
+      서버 없이 이 기기 브라우저에 저장됩니다.<br />
+      Safari 웹사이트 데이터를 삭제하면 저장 내용도 삭제될 수 있으니 가끔 백업해두세요.
+    </div>
+  </div>
+</body>
+</html>
